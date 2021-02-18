@@ -1,25 +1,35 @@
 import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import SearchArea from "./SearchArea";
+import MainDisplay from "./MainDisplay";
+import Forecast from "./Forecast";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <div className="App">
+      <div className="container">
+        <div className="card" style={{ width: "25rem" }}>
+          <script
+            src="https://kit.fontawesome.com/cf78426d14.js"
+            crossOrigin="anonymous"
+          ></script>
+          <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+          <link
+            href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
+            rel="stylesheet"
+          />
+
+          <SearchArea />
+          <MainDisplay />
+          <Forecast />
+        </div>
+        <Footer />
+      </div>
     </div>
   );
 }
+
 
 export default App;
