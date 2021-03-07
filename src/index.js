@@ -8,6 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 <head>
 <script src="https://kit.fontawesome.com/cf78426d14.js" crossorigin="anonymous"></script>
+
 </head>
 ReactDOM.render(
   <React.StrictMode>
@@ -20,3 +21,4 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+

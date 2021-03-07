@@ -9,7 +9,7 @@
 }
 
 .card {
-  background-image: url("https://ih1.redbubble.net/image.1179825302.2635/flat,750x1000,075,f.u2.jpg");
+  background: linear-gradient(to left, #8e2de2, #4a00e0);
   background-size: contain;
   display: block;
   margin: 0 auto;
