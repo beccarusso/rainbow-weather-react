@@ -76,11 +76,11 @@ li {
 
 .searchButton,
 .locationButton {
-  margin: 0 auto;
   height: 20px;
   width: 20px;
   border-radius: 4px;
   border: 2px rgb(153, 153, 153);
+  color: grey;
   position: relative;
   top: 3px;
 }

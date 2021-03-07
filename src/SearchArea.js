@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import { faHome, faMapMarkerAlt, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function SearchArea() {
   return (
@@ -19,14 +21,16 @@ export default function SearchArea() {
 
             <div className="col-">
               <button className="searchButton" type="submit" id="searchButton">
-                <i className="fas fa-search"></i>
+            
+                <FontAwesomeIcon icon={faSearch} />
               </button>
             </div>
 
             <div className="col-">
               <button className="locationButton" id="current-location-button">
-                <i className="fas fa-map-marker-alt"></i>
+                <FontAwesomeIcon icon={faMapMarkerAlt}/>
               </button>
+              
             </div>
           </div>
         </form>
