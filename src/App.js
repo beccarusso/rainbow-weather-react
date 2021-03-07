@@ -5,6 +5,7 @@ import SearchArea from "./SearchArea";
 import MainDisplay from "./MainDisplay";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
+import Background from "./Background";
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
             href="https://fonts.googleapis.com/css2?family=Abel&display=swap"
             rel="stylesheet"
           />
-
+          <Background />
           <SearchArea />
           <MainDisplay />
           <Forecast />
