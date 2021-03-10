@@ -9,13 +9,13 @@ import WeatherIcon from "./WeatherIcon";
 
 export default function MainDisplay()
  {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+
+  const [weatherData, setWeatherData] = useState({ ready: false});
   function handleResponse(response) {
   console.log(response.data);
 
   setWeatherData({
-    
+      ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
@@ -25,10 +25,9 @@ export default function MainDisplay()
       city: response.data.name,
     });
   
-  setReady(true);
 }
 
-if (ready) {
+if (weatherData.ready) {
  return (
     <div className="mainDisplay">
       <div className="city" id="city">
