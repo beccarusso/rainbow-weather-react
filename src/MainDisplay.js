@@ -2,7 +2,8 @@ import React, { useState} from "react";
 import "./App.css";
 import "./MainDisplay.css";
 import axios from "axios";
-import CurrentTime from "./CurrentTime.js"
+import CurrentTime from "./CurrentTime.js";
+import FormattedDate from "./FormattedDate.js";
 import WeatherIcon from "./WeatherIcon";
 
 
@@ -35,7 +36,7 @@ if (ready) {
         <br />
       </div>
       <ul>
-        <li id="date">Wednesday, March 10</li>
+        <li id="date"><FormattedDate/></li>
       
           <li id="time"><CurrentTime></CurrentTime></li>
 
