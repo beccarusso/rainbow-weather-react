@@ -5,7 +5,6 @@ import SearchArea from "./SearchArea";
 import MainDisplay from "./MainDisplay";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
-import Background from "./Background";
 
 function App() {
   function getClassDay() {
@@ -34,7 +33,6 @@ function App() {
             src="https://kit.fontawesome.com/cf78426d14.js"
             crossOrigin="anonymous"
           ></script>
-          <Background />
           <SearchArea />
           <MainDisplay />
           <Forecast />

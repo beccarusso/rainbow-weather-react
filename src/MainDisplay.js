@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import "./MainDisplay.css";
+
 
 export default function MainDisplay() {
   return (

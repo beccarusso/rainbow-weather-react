@@ -1,5 +1,7 @@
 import React from "react";
 import "./App.css";
+import "./SearchArea.css";
+
 import { faHome, faMapMarkerAlt, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
