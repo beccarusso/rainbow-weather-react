@@ -22,7 +22,8 @@ li {
 
 .city {
   font-weight: 600;
-  font-size: 28px;
+  font-size: 24px;
+  margin-top: 4px;
 }
 
 .fahrenheit-link,
