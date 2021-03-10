@@ -1,12 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
-import React from "react";
+import React, { useState } from "react";
 import SearchArea from "./SearchArea";
 import MainDisplay from "./MainDisplay";
 import Forecast from "./Forecast";
 import Footer from "./Footer";
+import axios from "axios";
+
+
 
 function App() {
+
   function getClassDay() {
     var currentTime = new Date().getHours();
     if (0 <= currentTime && currentTime < 5) {
@@ -15,13 +19,13 @@ function App() {
     if (5 <= currentTime && currentTime < 11) {
       return "morning";
     }
-    if (11 <= currentTime && currentTime < 16) {
+    if (11 <= currentTime && currentTime < 15) {
       return "day";
     }
-    if (16 <= currentTime && currentTime < 20) {
+    if (15 <= currentTime && currentTime < 21) {
       return "evening";
     }
-    if (20 <= currentTime && currentTime <= 24) {
+    if (21 <= currentTime && currentTime <= 24) {
       return "night";
     }
   }

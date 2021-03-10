@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState} from "react";
 import "./App.css";
 import "./MainDisplay.css";
+import axios from "axios";
 
 
-export default function MainDisplay() {
-  return (
+export default function MainDisplay()
+ {
+  const [ready, setReady] = useState(false);
+  const [temperature, setTemperature] = useState(null);
+  function handleResponse(response) {
+  console.log(response.data);
+  setTemperature(response.data.main.temp);
+  setReady(true);
+}
+
+if (ready) {
+ return (
     <div className="mainDisplay">
       <div className="city" id="city">
         Jamestown
@@ -27,7 +38,7 @@ export default function MainDisplay() {
         </li>
       </ul>
       <div className="mainTemperature">
-        <strong id="temperature">80 </strong>
+        <strong id="temperature">{temperature}</strong>
         <span className="units">
           <button className="celsius1">°C |</button>
           <button className="fahrenheit-link">°F</button>
@@ -35,4 +46,14 @@ export default function MainDisplay() {
       </div>
     </div>
   );
+} else {
+ const apiKey= "5f472b7acba333cd8a035ea85a0d4d4c";
+  let city="London";
+  let apiURL = `http://api.openweathermap.org/data/2.5/weather/?q=${city}&appid=${apiKey}&units=metric`;
+axios.get(apiURL).then(handleResponse);
+
+return "Loading...."
+
+}
+ 
 }

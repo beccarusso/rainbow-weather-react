@@ -24,9 +24,9 @@
 }
 
 .evening {
-  background: linear-gradient(to top, #2c3e50, #fd746c);
+  background: linear-gradient(to top, #2c3e50, #7a628f, #fd746c);
 }
 
 .night {
-  background: linear-gradient(to bottom, #8e2de2, #4a00e0, #2c3e50);
+  background: linear-gradient(to bottom, #ac5df1, #4a00e0, #2c3e50);
 }
