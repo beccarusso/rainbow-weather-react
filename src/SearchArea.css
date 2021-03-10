@@ -6,7 +6,7 @@
   border: 2px rgb(153, 153, 153);
   color: grey;
   position: relative;
-  top: 3px;
+  top: 7px;
 }
 
 .locationButton {
@@ -14,6 +14,14 @@
   left: 5px;
 }
 
+.searchButton {
+  position: relative;
+}
+
+#searchIcon {
+  position: relative;
+  left: -1px;
+}
 .SearchArea {
   position: relative;
   left: 100px;

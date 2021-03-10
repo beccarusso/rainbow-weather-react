@@ -24,7 +24,7 @@ export default function SearchArea() {
             <div className="col-">
               <button className="searchButton" type="submit" id="searchButton">
             
-                <FontAwesomeIcon icon={faSearch} />
+                <FontAwesomeIcon icon={faSearch} id="searchIcon" />
               </button>
             </div>
 
