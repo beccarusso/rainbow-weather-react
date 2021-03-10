@@ -66,7 +66,7 @@ if (weatherData.ready) {
 } else {
  const apiKey= "8442fbaaa5a17dce288a36b1c60566c0";
   let city="London";
-  let apiURL = `http://api.openweathermap.org/data/2.5/weather/?q=${city}&appid=${apiKey}&units=imperial`;
+  let apiURL = `https://api.openweathermap.org/data/2.5/weather/?q=${city}&appid=${apiKey}&units=imperial`;
 axios.get(apiURL).then(handleResponse);
 
 return "Loading...."
