@@ -29,11 +29,12 @@ li {
 #date {
   padding-top: 5px;
   line-height: 75%;
+  font-weight: 600;
 }
 
 #time {
   padding-top: 17px;
-  font-weight: 600;
+  font-weight: 550;
 }
 #humidity {
   padding-top: 25px;
@@ -42,7 +43,7 @@ li {
 
 #wind {
   font-size: 14px;
-  padding-top: 15px;
+  padding-top: 17px;
 }
 .fahrenheit-link,
 .celsius1 {
@@ -67,7 +68,7 @@ li {
 }
 .mainTemperature {
   position: relative;
-  top: 40px;
+  top: 7px;
 }
 
 #temperature {
@@ -80,12 +81,14 @@ li {
 }
 
 #description {
-  padding-top: 22px;
+  padding-top: 12px;
 
   font-size: 14px;
 }
 
-.icon {
+#icon {
   height: 50px;
   width: 50px;
+  left: 20px;
+  top: 15px;
 }
