@@ -31,17 +31,18 @@ if (ready) {
         </li>
         <li id="wind">
           Wind: <span id="wind-speed"></span>
-          <span className="windUnits"></span>5 km/h
+          <span className="windUnits"></span>5 mp/h
         </li>
         <li id="description"><em> Mostly cloudy </em>
           <div className="icon"></div>
         </li>
       </ul>
       <div className="mainTemperature">
-        <strong id="temperature">{temperature}</strong>
+        <strong id="temperature">{Math.round(temperature)}</strong>
         <span className="units">
-          <button className="celsius1">°C |</button>
-          <button className="fahrenheit-link">°F</button>
+          <button className="fahrenheit-link">°F |</button>
+          <button className="celsius1">°C</button>
+          
         </span>
       </div>
     </div>
@@ -49,7 +50,7 @@ if (ready) {
 } else {
  const apiKey= "5f472b7acba333cd8a035ea85a0d4d4c";
   let city="London";
-  let apiURL = `http://api.openweathermap.org/data/2.5/weather/?q=${city}&appid=${apiKey}&units=metric`;
+  let apiURL = `http://api.openweathermap.org/data/2.5/weather/?q=${city}&appid=${apiKey}&units=imperial`;
 axios.get(apiURL).then(handleResponse);
 
 return "Loading...."

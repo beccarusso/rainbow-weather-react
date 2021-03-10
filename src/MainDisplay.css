@@ -5,6 +5,8 @@ li {
   list-style: none;
   left: -18px;
   position: relative;
+  margin: 0;
+  padding: 0;
 }
 
 .mainDisplay {
@@ -48,17 +50,33 @@ li {
   background: none;
   position: relative;
   top: -15px;
+  font-size: 14px;
+  left: 5px;
+}
+
+.celsius1 {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: -5px;
 }
 
 .fahrenheit-link {
   position: relative;
-  left: -7px;
+  left: -1px;
+}
+.mainTemperature {
+  position: relative;
+  top: 40px;
 }
 
 #temperature {
   font-size: 40px;
   position: relative;
-  left: 20px;
+  left: 7px;
+  margin: 0;
+  padding: 0;
+  line-height: 50%;
 }
 
 #description {
