@@ -11,16 +11,18 @@ export default function MainDisplay() {
         <br />
       </div>
       <ul>
-        <li id="date"></li>
+        <li id="date">Wednesday, March 10</li>
+      
+          <li id="time">10:00</li>
 
-        <li>
-          Humidity: <span id="humidity"></span>80%
+        <li id="humidity">
+          Humidity: <span id="humidity-percent">80%</span>
         </li>
-        <li>
-          Wind: <span id="wind"></span>
+        <li id="wind">
+          Wind: <span id="wind-speed"></span>
           <span className="windUnits"></span>5 km/h
         </li>
-        <li id="description">
+        <li id="description"><em> Mostly cloudy </em>
           <div className="icon"></div>
         </li>
       </ul>

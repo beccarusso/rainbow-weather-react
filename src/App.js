@@ -10,7 +10,7 @@ function App() {
   function getClassDay() {
     var currentTime = new Date().getHours();
     if (0 <= currentTime && currentTime < 5) {
-      return "morning";
+      return "night";
     }
     if (5 <= currentTime && currentTime < 11) {
       return "morning";
@@ -18,10 +18,10 @@ function App() {
     if (11 <= currentTime && currentTime < 16) {
       return "day";
     }
-    if (16 <= currentTime && currentTime < 22) {
+    if (16 <= currentTime && currentTime < 20) {
       return "evening";
     }
-    if (22 <= currentTime && currentTime <= 24) {
+    if (20 <= currentTime && currentTime <= 24) {
       return "night";
     }
   }
