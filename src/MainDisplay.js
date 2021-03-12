@@ -7,14 +7,14 @@ import FormattedDate from "./FormattedDate.js";
 import WeatherIcon from "./WeatherIcon";
 
 
-export default function MainDisplay()
+export default function MainDisplay(props)
  {
 
-  const [weatherData, setWeatherData] = useState({ ready: false});
-  function handleResponse(response) {
-  console.log(response.data);
+  const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
 
-  setWeatherData({
+  function handleResponse(response) {
+    setWeatherData({
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
@@ -24,8 +24,24 @@ export default function MainDisplay()
       wind: response.data.wind.speed,
       city: response.data.name,
     });
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
+  function search() {
+    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+  }
   
-}
+
 
 if (weatherData.ready) {
  return (
@@ -64,13 +80,8 @@ if (weatherData.ready) {
     </div>
   );
 } else {
- const apiKey= "8442fbaaa5a17dce288a36b1c60566c0";
-  let city="London";
-  let apiURL = `https://api.openweathermap.org/data/2.5/weather/?q=${city}&appid=${apiKey}&units=imperial`;
-axios.get(apiURL).then(handleResponse);
-
-return "Loading...."
-
+  search();
+    return "Loading...";
 }
  
-}
+ }

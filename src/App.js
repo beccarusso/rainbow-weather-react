@@ -38,7 +38,7 @@ function App() {
             crossOrigin="anonymous"
           ></script>
           <SearchArea />
-          <MainDisplay />
+          <MainDisplay defaultCity="New York" />
           <Forecast />
         </div>
         <Footer />
