@@ -7,7 +7,6 @@ import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 <head>
-<script src="https://kit.fontawesome.com/cf78426d14.js" crossorigin="anonymous"></script>
 
 </head>
 ReactDOM.render(

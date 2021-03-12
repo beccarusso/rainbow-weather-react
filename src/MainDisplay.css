@@ -12,59 +12,71 @@ li {
 .mainDisplay {
   position: relative;
   height: 250px;
-  width: 160px;
-  left: 125px;
+  width: 200px;
+  left: 102px;
   text-align: center;
   background: #fff;
   display: block;
   border-radius: 6px;
   border: 6px gray;
+  top: 50px;
 }
 
 .city {
   font-weight: 600;
   font-size: 24px;
   margin-top: 4px;
+  position: relative;
+  top: -57px;
 }
 #date {
   padding-top: 5px;
   line-height: 75%;
   font-weight: 600;
+  position: relative;
+  top: -60px;
 }
 
 #time {
   padding-top: 17px;
   font-weight: 550;
+  position: relative;
+  top: -65px;
 }
+
 #humidity {
   padding-top: 22px;
   font-size: 14px;
+  position: relative;
+  top: -65px;
 }
 
 #wind {
   font-size: 14px;
   padding-top: 17px;
+  position: relative;
+  top: -63px;
 }
 .fahrenheit-link,
 .celsius1 {
   border: none;
   background: none;
   position: relative;
-  top: -15px;
   font-size: 14px;
-  left: 5px;
+  position: relative;
+  top: -75px;
 }
 
 .celsius1 {
   margin: 0;
   padding: 0;
   position: relative;
-  left: -5px;
+  left: 8px;
 }
 
 .fahrenheit-link {
   position: relative;
-  left: -1px;
+  left: 12px;
 }
 .mainTemperature {
   position: relative;
@@ -74,7 +86,8 @@ li {
 #temperature {
   font-size: 40px;
   position: relative;
-  left: 7px;
+  bottom: 60px;
+  left: 20px;
   margin: 0;
   padding: 0;
   line-height: 50%;
@@ -84,11 +97,15 @@ li {
   padding-top: 12px;
 
   font-size: 14px;
+  position: relative;
+  top: -110px;
 }
 
 #icon {
   height: 50px;
   width: 50px;
-  left: 20px;
+  left: 40px;
   top: 20px;
+  position: relative;
+  top: -30px;
 }

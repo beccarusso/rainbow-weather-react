@@ -1,21 +1,12 @@
-.searchButton,
-.locationButton {
+.searchButton {
   height: 25px;
   width: 25px;
   border-radius: 4px;
   border: 2px rgb(153, 153, 153);
   color: grey;
   position: relative;
-  top: 7px;
-}
-
-.locationButton {
-  position: relative;
-  left: 5px;
-}
-
-.searchButton {
-  position: relative;
+  top: 8px;
+  right: -25px;
 }
 
 #searchIcon {
@@ -24,6 +15,6 @@
 }
 .SearchArea {
   position: relative;
-  left: 100px;
-  top: 10px;
+  left: 0px;
+  top: -50px;
 }

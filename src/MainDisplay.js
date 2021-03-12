@@ -1,16 +1,19 @@
 import React, { useState} from "react";
 import "./App.css";
+import "./SearchArea.css";
 import "./MainDisplay.css";
 import axios from "axios";
-import CurrentTime from "./CurrentTime.js";
-import FormattedDate from "./FormattedDate.js";
-import WeatherIcon from "./WeatherIcon";
+import WeatherInfo from "./WeatherInfo";
+
+import { faHome, faMapMarkerAlt, faSearch } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 
 export default function MainDisplay(props)
  {
 
-  const [weatherData, setWeatherData] = useState({ ready: false });
+ const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
 
   function handleResponse(response) {
@@ -40,43 +43,42 @@ export default function MainDisplay(props)
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
   }
-  
 
 
 if (weatherData.ready) {
  return (
     <div className="mainDisplay">
-      <div className="city" id="city">
-        {weatherData.city}
-        <br />
-      </div>
-      <ul>
-        <li id="date"><FormattedDate/></li>
-      
-          <li id="time"><CurrentTime></CurrentTime></li>
-
-        <li id="humidity">
-        💧 Humidity: <span id="humidity-percent">{weatherData.humidity}%</span>
-        </li>
-        <li id="wind">
-         💨 Wind: <span id="wind-speed"></span>
-          <span className="windUnits"></span>{Math.round(weatherData.wind)} mp/h
-        </li>
-        <li id="icon">
-          <WeatherIcon code={weatherData.icon} />
-        
-        </li>
-        <li id="description"><em>{weatherData.description} </em>
-        </li>
-      </ul>
-      <div className="mainTemperature">
-        <strong id="temperature">{Math.round(weatherData.temperature)}</strong>
-        <span className="units">
-          <button className="fahrenheit-link">°F |</button>
-          <button className="celsius1">°C</button>
+         <div className="SearchArea">
+            <div className="searchBar" id="searchBar">
+              <form onSubmit={handleSubmit}
+                    className="form-inline md-form mr-auto mb-4" id="search-form">
           
-        </span>
+          <div className="row">
+            <div className="col-9">
+              <input
+                className="form-control mr-sm-2"
+                type="search"
+                placeholder="Enter a city.."
+                aria-label="Search"
+                id="city-input"
+                autofocus="on"
+                onChange={handleCityChange}
+              />
+            </div>
+
+            <div className="col-3">
+              <button className="searchButton" type="submit" id="searchButton">
+            
+                <FontAwesomeIcon icon={faSearch} id="searchIcon" />
+              </button>
+            </div>
+
+            
+          </div>
+        </form>
       </div>
+    </div>
+    <WeatherInfo data={weatherData} />
     </div>
   );
 } else {

@@ -15,7 +15,10 @@
   padding-bottom: 15px;
   padding-top: 15px;
   margin-top: 15px;
+  height: 400px;
+  width: 400px;
 }
+
 .morning {
   background: linear-gradient(to top, #c6ffdd, #fbd786, #f7797d);
 }
