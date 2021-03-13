@@ -57,8 +57,8 @@ li {
   position: relative;
   top: -63px;
 }
-.fahrenheit-link,
-.celsius1 {
+#fahrenheitUnit,
+#celsiusUnit {
   border: none;
   background: none;
   position: relative;
@@ -67,14 +67,14 @@ li {
   top: -75px;
 }
 
-.celsius1 {
+#celsiusUnit {
   margin: 0;
   padding: 0;
   position: relative;
   left: 8px;
 }
 
-.fahrenheit-link {
+#fahrenheitUnit {
   position: relative;
   left: 12px;
 }
