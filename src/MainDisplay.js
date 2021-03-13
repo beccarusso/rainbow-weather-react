@@ -4,6 +4,7 @@ import "./SearchArea.css";
 import "./MainDisplay.css";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 
 import { faHome, faMapMarkerAlt, faSearch } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -39,7 +40,7 @@ export default function MainDisplay(props)
   }
 
   function search() {
-    const apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
+    let apiKey = "5f472b7acba333cd8a035ea85a0d4d4c";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -61,7 +62,7 @@ if (weatherData.ready) {
                 placeholder="Enter a city.."
                 aria-label="Search"
                 id="city-input"
-                autofocus="on"
+                autoFocus="on"
                 onChange={handleCityChange}
               />
             </div>
@@ -79,6 +80,7 @@ if (weatherData.ready) {
       </div>
     </div>
     <WeatherInfo data={weatherData} />
+    <WeatherForecast city={weatherData.city} />
     </div>
   );
 } else {

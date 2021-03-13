@@ -1,0 +1,18 @@
+.WeatherForecast canvas {
+  display: block;
+  height: 35px;
+  width: 35px;
+  margin: 0px auto;
+}
+
+#WeatherForecast {
+  position: relative;
+  top: -25px;
+  background: #fff;
+  color: #7c7c7c;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: center;
+  width: 350px;
+  left: -62px;
+}
