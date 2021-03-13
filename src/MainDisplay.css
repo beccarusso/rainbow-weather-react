@@ -57,14 +57,14 @@ li {
   position: relative;
   top: -63px;
 }
-#fahrenheitUnit,
-#celsiusUnit {
+.unit {
   border: none;
   background: none;
   position: relative;
   font-size: 14px;
   position: relative;
-  top: -75px;
+  top: -77px;
+  right: -10px;
 }
 
 #celsiusUnit {
@@ -83,7 +83,7 @@ li {
   top: 7px;
 }
 
-#temperature {
+.temperature {
   font-size: 40px;
   position: relative;
   bottom: 60px;
@@ -91,6 +91,7 @@ li {
   margin: 0;
   padding: 0;
   line-height: 50%;
+  left: 10px;
 }
 
 #description {
