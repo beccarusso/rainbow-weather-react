@@ -19,10 +19,17 @@
 }
 
 .morning {
-  background: linear-gradient(to top, #c6ffdd, #fbd786, #f7797d);
+  background: linear-gradient(
+    to top,
+    #5b5a8f,
+    #d16e9e,
+    #ac9bd1,
+    #5b7ff1,
+    #485994
+  );
 }
-.morning-late {
-  background: linear-gradient(to top, #b21f1f, #fdbb2d);
+.day {
+  background: linear-gradient(to top, #c6ffdd, #fbd786, #f7797d);
 }
 
 .evening {

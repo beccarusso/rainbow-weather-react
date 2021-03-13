@@ -9,16 +9,16 @@ import axios from "axios";
 
 
 function App() {
-
+// 🌈 Enjoy this colorful app! The background color changes based on your current time :)
   function getClassDay() {
     var currentTime = new Date().getHours();
-    if (0 <= currentTime && currentTime < 5) {
+    if (0 <= currentTime && currentTime < 4) {
       return "night";
     }
-    if (5 <= currentTime && currentTime < 11) {
+    if (4 <= currentTime && currentTime < 9) {
       return "morning";
     }
-    if (11 <= currentTime && currentTime < 15) {
+    if (9 <= currentTime && currentTime < 15) {
       return "day";
     }
     if (15 <= currentTime && currentTime < 21) {
