@@ -2,6 +2,8 @@ import React from "react";
 import CurrentTime from "./CurrentTime.js";
 import FormattedDate from "./FormattedDate.js";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
+
 import "./App.css";
 import "./MainDisplay.css";
 
@@ -31,14 +33,8 @@ return (
         <li id="description"><em>{props.data.description} </em>
         </li>
       </ul>
-      <div className="mainTemperature">
-        <strong id="temperature">{Math.round(props.data.temperature)}</strong>
-        <span className="units">
-          <button className="fahrenheit-link">°F |</button>
-          <button className="celsius1">°C</button>
-          
-        </span>
-      </div>
+      <WeatherTemperature fahrenheit={props.data.temperature} />
+     
     </div>
 )
 };
